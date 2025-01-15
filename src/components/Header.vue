@@ -1,25 +1,21 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button
-      @btn-click="$emit('toggle-add-task-form')"
-      :text="showAddTaskForm ? 'Close' : 'Add Task'"
+    <v-btn
+      @click="$emit('toggle-add-task-form')"
       :color="showAddTaskForm ? 'red' : 'green'"
-    />
+    >
+      {{ showAddTaskForm ? "Close" : "Add Task" }}
+    </v-btn>
   </header>
 </template>
 
 <script>
-import Button from "./Button.vue";
-
 export default {
   name: "Header",
   props: {
     title: String,
     showAddTaskForm: Boolean,
-  },
-  components: {
-    Button,
   },
   emits: ["toggle-add-task-form"],
 };

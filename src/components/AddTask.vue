@@ -25,7 +25,7 @@
       <input type="checkbox" v-model="reminder" name="reminder" />
     </div>
 
-    <input type="submit" value="Save Task" class="btn btn-block" />
+    <v-btn color="black" type="submit" block>Submit</v-btn>
   </form>
 </template>
 
