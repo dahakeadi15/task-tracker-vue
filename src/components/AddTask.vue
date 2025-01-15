@@ -2,12 +2,19 @@
   <form @submit="onSubmit" class="add-form">
     <div class="form-control">
       <label>Task</label>
-      <input type="text" v-model="text" name="text" placeholder="Add Task" />
+      <input
+        type="text"
+        class="text-input"
+        v-model="text"
+        name="text"
+        placeholder="Add Task"
+      />
     </div>
     <div class="form-control">
       <label>Day & Time</label>
       <input
         type="text"
+        class="text-input"
         v-model="day"
         name="day"
         placeholder="Add Day & Time"
@@ -55,6 +62,11 @@ export default {
 </script>
 
 <style scoped>
+.text-input {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
 .add-form {
   margin-bottom: 40px;
 }
@@ -78,15 +90,15 @@ export default {
 .form-control-check {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .form-control-check label {
-  flex: 1;
+  text-wrap: nowrap;
 }
 
 .form-control-check input {
-  flex: 2;
   height: 20px;
+  width: 40px;
 }
 </style>

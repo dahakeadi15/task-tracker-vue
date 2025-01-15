@@ -93,7 +93,7 @@ body {
 .btn {
   display: inline-block;
   background: #000;
-  color: #fff;
+  color: #fff !important;
   border: none;
   padding: 10px 20px;
   margin: 5px;
