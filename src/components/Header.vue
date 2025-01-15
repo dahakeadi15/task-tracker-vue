@@ -2,6 +2,7 @@
   <header>
     <h1>{{ title }}</h1>
     <v-btn
+      v-show="homePage"
       @click="$emit('toggle-add-task-form')"
       :color="showAddTaskForm ? 'red' : 'green'"
     >
@@ -18,6 +19,12 @@ export default {
     showAddTaskForm: Boolean,
   },
   emits: ["toggle-add-task-form"],
+  computed: {
+    homePage() {
+      if (this.$route.path === "/") return true;
+      else return false;
+    },
+  },
 };
 </script>
 
